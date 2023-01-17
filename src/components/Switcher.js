@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Transition } from "@headlessui/react";
+
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useDarkSide from "../components/useDarkSide";
 export default function Switcher() {
@@ -14,7 +14,7 @@ export default function Switcher() {
         setDarkSide(checked);
     };
   
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen] = useState(false);
 
     const [user, setUser] = useState([]);
 
@@ -34,7 +34,7 @@ export default function Switcher() {
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="space-x-4 inline-flex items-center justify-center rounded-md focus:outline-none">
-                  <a href={user['html_url']} class="group relative flex justify-center">
+                  <a href={user['html_url']} className="group relative flex justify-center">
                     
                   <button  type="button"><img
                       className="p-2 rounded-full h-16 w-16"
@@ -42,7 +42,7 @@ export default function Switcher() {
                       alt="Avatar"
                     /></button>
                     
-  <a class="absolute top-10 space-y-px bg-gray-600 dark:bg-gray-800  scale-0 rounded p-1 text-xs text-white group-hover:scale-100">GitHub</a>
+  <span className="absolute top-10 space-y-px bg-gray-600 dark:bg-gray-800  scale-0 rounded p-1 text-xs text-white group-hover:scale-100">GitHub</span>
   
 </a>
 
@@ -61,23 +61,6 @@ export default function Switcher() {
                 </div>
               </div>
             </div>
-    
-            <Transition
-              show={isOpen}
-              enter="transition ease-out duration-100 transform"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="transition ease-in duration-75 transform"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              {(ref) => (
-                <div className="md:hidden" id="mobile-menu">
-                  <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  </div>
-                </div>
-              )}
-            </Transition>
           </nav>
         </div>
       );
