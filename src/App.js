@@ -61,7 +61,7 @@ function App() {
     <p className="font-bold text-gray-400 dark:text-gray-300">{user['bio']}</p>
 
     <p className="font-normal text-gray-700 dark:text-gray-400">Known online as alMajor, a {getAge()} y/o Software Engineer from {user['location']}<br></br>Currently a Fullstack web Developer.
-Intrested In Cybersecurity, Data Analysis, Machine Learning.</p>
+interested in Cybersecurity, Data Analysis, Machine Learning.</p>
 
 
 
