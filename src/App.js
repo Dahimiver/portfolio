@@ -14,13 +14,13 @@ function getAge(dateString) {
 }
 function App() {
   const [time, setTime] = React.useState('');
-  var d = new Date();
-  var local = d.getTime();
-  var offset = d.getTimezoneOffset() * (60 * 1000);
-  var utc = new Date(local + offset);
-  var riyadh = new Date(utc.getTime() + (3 * 60 * 60 * 1000));
 
   useEffect(()=>{
+    var d = new Date();
+    var local = d.getTime();
+    var offset = d.getTimezoneOffset() * (60 * 1000);
+    var utc = new Date(local + offset);
+    var riyadh = new Date(utc.getTime() + (3 * 60 * 60 * 1000));  
     setTime(riyadh.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
