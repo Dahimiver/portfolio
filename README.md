@@ -1,1 +1,1 @@
-# enique automated portfolio, updates information from github account and more.
+# A enique ReactJS portfolio and updates information from github account.
