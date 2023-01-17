@@ -13,8 +13,6 @@ export default function Switcher() {
         setTheme(colorTheme);
         setDarkSide(checked);
     };
-  
-    const [isOpen] = useState(false);
 
     const [user, setUser] = useState([]);
 
