@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+outline: 0;
+}
+#top {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.dark {
+
+}
+.dark .bg-black {
+
+}
+.darkline {
+  --color: rgba(115, 115, 115, 0.4);
+  --position: center center;
+  --width: 100%;
+  --height: 3px;
+  background: linear-gradient(var(--color), var(--color)) var(--position) / var(--width) var(--height) no-repeat;
+}
+
+.dark .darkline {
+  --color: rgba(0, 123, 255, 0.4);
+  --position: center center;
+  --width: 100%;
+  --height: 3px;
+  background: linear-gradient(var(--color), var(--color)) var(--position) / var(--width) var(--height) no-repeat;
+}
