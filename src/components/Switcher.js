@@ -17,7 +17,7 @@ export default function Switcher() {
     const [user, setUser] = useState([]);
 
     const fetchData = () => {
-      return fetch("https://api.github.com/users/almajor")
+      return fetch("https://api.github.com/users/dahimiver")
             .then((response) => response.json())
             .then((data) => setUser(data));
     }
