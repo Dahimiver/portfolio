@@ -43,7 +43,7 @@ function App() {
   const [user, setUser] = useState([]);
 
   const fetchData = () => {
-    return fetch("https://api.github.com/users/almajor")
+    return fetch("https://api.github.com/users/dahimiver")
           .then((response) => response.json())
           .then((data) => setUser(data));
   }
@@ -60,7 +60,7 @@ function App() {
     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{user['name']}</h5>
     <p className="font-bold text-gray-400 dark:text-gray-300">{user['bio']}</p>
 
-    <p className="font-normal text-gray-700 dark:text-gray-400">Known online as alMajor, a {getAge()} y/o Software Engineer from {user['location']}<br></br>Currently a Fullstack web Developer.
+    <p className="font-normal text-gray-700 dark:text-gray-400">Known online as Dahimiver, a {getAge()} y/o Software Engineer from {user['location']}<br></br>Currently a Fullstack web Developer.
 interested in Cybersecurity, Data Analysis, Machine Learning.</p>
 
 
